@@ -21,10 +21,11 @@ export const ACTIONS = {
 const calculate = function (state: State): string {
   const { currentOperand, previousOperand, operation } = state;
 
-  let current = parseFloat(currentOperand);
+  let current =
+    currentOperand === "." ? parseFloat("0.") : parseFloat(currentOperand);
   let prev = parseFloat(previousOperand);
 
-  console.log(currentOperand);
+  console.log({ currentOperand, previousOperand });
 
   if (isNaN(current) && isNaN(prev)) return "";
   let computation: number | string = "";

@@ -2,7 +2,7 @@ import React from "react";
 import { ACTIONS } from "../App";
 
 function OperationButton(props: any) {
-  const { operation, dispatch, childiren } = props;
+  const { operation, dispatch } = props;
 
   return (
     <button
